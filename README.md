@@ -1,12 +1,41 @@
-# React + Vite
+Here's a summary of what I've accomplished:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Project Overview
 
-Currently, two official plugins are available:
+I've built a complete Tic-tac-toe game using React with:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A modular component architecture
+- Clean separation of concerns
+- Full game functionality with player turns, win detection, and history tracking
 
-## Expanding the ESLint configuration
+### Architecture Details
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Modular Design**: Each component is in its own file with a single responsibility
+2. **Separation of Concerns**: UI components are separated from game logic
+3. **Component Hierarchy**: Clear parent-child relationships between components
+4. **State Management**: Game state handled in the main Game component
+
+### Code Structure
+
+```
+src/
+├── components/
+│   ├── Square.jsx
+│   ├── Board.jsx
+│   ├── GameHistory.jsx
+│   └── GameStatus.jsx
+├── utils/
+│   └── gameLogic.jsx
+├── Game.jsx
+└── main.jsx
+```
+
+### Key Features
+
+- Player turns (X and O)
+- Win detection logic
+- Draw detection
+- Game history tracking
+- Time travel to previous moves
+- Game reset functionality
+- Status messages
